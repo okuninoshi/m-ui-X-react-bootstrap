@@ -1,0 +1,30 @@
+{
+  "name": "mui-react",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MuiReact",
+  "author": "okuninoshi",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "bootstrap": "^4.5.3",
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-material-ui": "^2.1.10",
+    "gatsby-plugin-styled-components": "^3.7.0",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.1"
+  }
+}
