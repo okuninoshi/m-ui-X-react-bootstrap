@@ -1,19 +1,24 @@
 import * as React from "react"
 import {
-  Container
+  Row,
 } from 'react-bootstrap'
-import {
-  Button
-} from '@material-ui/core'
 
+import Layout from '../components/layout'
 const IndexPage = () => {
   return (
-    <Container fluid="lg">
-      <main>
-        <p style={{ color: 'yellow' }}>yellow</p>
-        <Button variant="outlined" color="primary">Secondary button</Button>
-      </main>
-    </Container>
+    <Layout>
+      <Row>
+        <div style={{              // add vertical scrolling 
+          background: "#aebece",
+          height: "2000px",
+          width: "100%",
+          padding: 0,
+          margin: 0,
+        }}>
+
+        </div>
+      </Row>
+    </Layout>
   )
 }
 
