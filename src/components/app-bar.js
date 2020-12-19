@@ -116,7 +116,7 @@ export default function PrimarySearchAppBar() {
 
     return (
         <AppBarStyles>
-            <AppBar position="static" className="app-bar px-lg-5">
+            <AppBar position="fixed" className="app-bar px-lg-5">
                 <Toolbar className="toolbar">
                     <Row className="align-items-center justify-content-center flex-grow-1">
                         <Col xs={1} md={2} className="d-flex justify-content-start">
