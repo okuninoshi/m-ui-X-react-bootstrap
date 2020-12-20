@@ -33,10 +33,7 @@ const FooterWrapper = styled.div`
 `
 
 const Footer = () => {
-    // console.log(LinksData);
     const { DOCS, CHANNELS, COMMUNITY, MORE } = LinksData
-    console.log(DOCS);
-
     return (
         <FooterWrapper className="footer-bg">
             <Container fluid="lg" >

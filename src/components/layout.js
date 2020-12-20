@@ -12,6 +12,12 @@ const GlobalStyle = createGlobalStyle`
 body,html {
     margin:0;
     padding:0;
+    font-family: -apple-system, BlinkMacSystemFont,
+                 Segoe UI, Roboto,Oxygen,
+                 Ubuntu,Cantarell,
+                 Fira Sans,Droid Sans,
+                 Helvetica Neue,sans-serif;
+    font-weight: 400;
 }
 h1,h2,h3{
     color: #61dafb;
@@ -24,7 +30,7 @@ const Layout = ({ children }) => {
             <GlobalStyle />
             <Container fluid className="px-0">
                 <PrimarySearchAppBar />
-                <Container fluid="lg" className="py-5 mt-5">
+                <Container fluid className="px-0 pt-5">
                     {children}
                 </Container>
                 <Footer />
