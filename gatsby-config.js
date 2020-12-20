@@ -1,20 +1,7 @@
 module.exports = {
     plugins: [
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `pages`,
-                path: `${__dirname}/src/pages/`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `data`,
-                path: `${__dirname}/src/data/`,
-                ignore: [`**/\.*`], // ignore files starting with a dot
-            },
-        },
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-transformer-remark`,
             options: {
@@ -30,6 +17,22 @@ module.exports = {
                 plugins: [],
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `html`,
+                path: `${__dirname}/content/html`,
+                ignore: [`**/\.*`], // ignore files starting with a dot
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/content/img`,
+            },
+        },
+
         {
             resolve: `gatsby-plugin-material-ui`,
             options: {
