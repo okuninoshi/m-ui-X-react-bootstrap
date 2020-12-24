@@ -18,7 +18,6 @@ import {
 // make sure to inject first the M-ui styles in the gatsby-config.js folder in gatsby-plugin-material-ui
 import styled from 'styled-components'
 
-
 const AppBarStyles = styled.div`
     .app-bar{
         background:#20232a;
@@ -107,11 +106,11 @@ const breakpoints = {
 }
 export default function PrimarySearchAppBar() {
 
-    const xs = useMediaQuery(`(min-width: ${breakpoints.sm})`); // < 576px
-    const sm = useMediaQuery(`(min-width: ${breakpoints.sm})`); // >= 576px
+    // const xs = useMediaQuery(`(min-width: ${breakpoints.sm})`); // < 576px
+    // const sm = useMediaQuery(`(min-width: ${breakpoints.sm})`); // >= 576px
     const md = useMediaQuery(`(min-width: ${breakpoints.md})`); // >= 768px
     const lg = useMediaQuery(`(min-width: ${breakpoints.lg})`); // >= 992px
-    const xl = useMediaQuery(`(min-width: ${breakpoints.xl})`); // >= 1200px
+    // const xl = useMediaQuery(`(min-width: ${breakpoints.xl})`); // >= 1200px
 
 
     return (

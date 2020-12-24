@@ -5,8 +5,9 @@ import {
 
 import styled from 'styled-components'
 import Link from './link'
-import LinksData from "../../content/footer-links.yaml"
+// import LinksData from "../../content/footer-links.md"
 import logo from "../images/logo.png"
+import { useStaticQuery, graphql } from 'gatsby'
 
 const FooterWrapper = styled.div`
     background-color: #20232a;
@@ -33,7 +34,39 @@ const FooterWrapper = styled.div`
 `
 
 const Footer = () => {
-    const { DOCS, CHANNELS, COMMUNITY, MORE } = LinksData
+    const data = useStaticQuery(graphql`
+    query footerLinks {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/footer/"}}) {
+            edges {
+                node {
+                id
+                frontmatter {
+                    CHANNELS {
+                    name
+                    url
+                    }
+                    COMMUNITY {
+                    name
+                    url
+                    }
+                    DOCS {
+                    name
+                    url
+                    }
+                    MORE {
+                    name
+                    url
+                    }
+                }
+                }
+            }
+        }
+    }
+`)
+
+    const { frontmatter } = data.allMarkdownRemark.edges[0].node
+    const { DOCS, CHANNELS, COMMUNITY, MORE } = frontmatter
+
     return (
         <FooterWrapper className="footer-bg">
             <Container fluid="lg" >
@@ -48,9 +81,9 @@ const Footer = () => {
                         <Row >
                             <Col sm={6} className="mb-3">
                                 <h6 className="sections-title">Docs</h6>
-                                {DOCS.map(({ name, url }) => {
+                                {DOCS.map(({ name, url }, key) => {
                                     return (
-                                        <Link to={url}>
+                                        <Link key={key} to={url}>
                                             {name}
                                         </Link>
                                     )
@@ -58,9 +91,9 @@ const Footer = () => {
                             </Col>
                             <Col sm={6} className="mb-3">
                                 <h6 className="sections-title">CHANNELS</h6>
-                                {CHANNELS.map(({ name, url }) => {
+                                {CHANNELS.map(({ name, url }, key) => {
                                     return (
-                                        <Link to={url}>
+                                        <Link key={key} to={url}>
                                             {name}
                                         </Link>
                                     )
@@ -68,9 +101,9 @@ const Footer = () => {
                             </Col>
                             <Col md={6} className="mt-3">
                                 <h6 className="sections-title">COMMUNITY</h6>
-                                {COMMUNITY.map(({ name, url }) => {
+                                {COMMUNITY.map(({ name, url }, key) => {
                                     return (
-                                        <Link to={url}>
+                                        <Link key={key} to={url}>
                                             {name}
                                         </Link>
                                     )
@@ -78,9 +111,9 @@ const Footer = () => {
                             </Col>
                             <Col md={6} className="mt-3">
                                 <h6 className="sections-title">MORE</h6>
-                                {MORE.map(({ name, url }) => {
+                                {MORE.map(({ name, url }, key) => {
                                     return (
-                                        <Link to={url}>
+                                        <Link key={key} to={url}>
                                             {name}
                                         </Link>
                                     )

@@ -1,3 +1,4 @@
+---
 DOCS:
   -
     name: Installation
@@ -74,3 +75,4 @@ MORE:
   - 
     name: Terms
     url: https://opensource.facebook.com/legal/terms
+---

@@ -4,9 +4,9 @@ import {
     Container
 } from 'react-bootstrap'
 import PrimarySearchAppBar from './app-bar'
+import Footer from './footer'
 import { createGlobalStyle } from 'styled-components'
 
-import Footer from './footer'
 
 const GlobalStyle = createGlobalStyle`
 body,html {
