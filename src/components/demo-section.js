@@ -62,8 +62,8 @@ const Demos = () => {
                     return (
                         <Row key={node.id} className="py-5">
                             <Col xs={12} lg={4} className="px-4 d-flex align-items-center" dangerouslySetInnerHTML={{ __html: node.html }} />
-                            <Col xs={8} className="p-0">
-                                <img minWidth="700px" width="100%" height="auto" src={node.frontmatter.CodeImage.publicURL} alt={node.frontmatter.CodeImage.name} />
+                            <Col xs={12} md={8} className="px-2">
+                                <img min-width="700px" width="100%" height="auto" src={node.frontmatter.CodeImage.publicURL} alt={node.frontmatter.CodeImage.name} />
                             </Col>
                         </Row>
                     )

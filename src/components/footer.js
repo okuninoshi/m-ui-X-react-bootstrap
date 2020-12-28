@@ -2,10 +2,8 @@ import React from 'react'
 import {
     Col, Container, Row
 } from 'react-bootstrap'
-
 import styled from 'styled-components'
 import Link from './link'
-// import LinksData from "../../content/footer-links.md"
 import logo from "../images/logo.png"
 import { useStaticQuery, graphql } from 'gatsby'
 

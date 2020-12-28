@@ -54,6 +54,9 @@ const AppBarStyles = styled.div`
             background-color: #373940;
             color: #ffffff;
         }
+        @media(max-width:425px){
+            font-size:13px;
+        }
     }
 
     .link-asb{
@@ -116,8 +119,8 @@ export default function PrimarySearchAppBar() {
     return (
         <AppBarStyles>
             <AppBar position="fixed" className="app-bar px-lg-5">
-                <Toolbar className="toolbar">
-                    <Row className="align-items-center justify-content-center flex-grow-1">
+                <Toolbar className="px-0">
+                    <Row noGutters className="align-items-center justify-content-center flex-grow-1">
                         <Col xs={1} md={2} className="d-flex justify-content-start">
                             <Link to={`/`} className="d-flex react-logo">
                                 <img width="22px" height="20px" src="/img/ReactJS.svg" alt="ReactJS" />
